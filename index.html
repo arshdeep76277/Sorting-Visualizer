@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sorting visualizer</title>
+    <link href="index.css" rel="stylesheet" >
+</head>
+<body>
+    <h2>Sorting visualizer</h2>
+    <form class="form">
+        <label>Speed:</label>
+        <input id="speed" type="range" name="speed" value="25" min="0" max="1000">
+        <label>Array size:</label>
+        <input id="size" type="range" name="size" value="50" min="10" max="100">
+    </form>
+    <div class="btn-container">
+        <button class="btn new-array btn-green" onclick="CreateArray()">New Array</button>
+        <button class="btn bubble btn-primary" onclick="bubble()">Bubble Sort</button>
+        <button class="btn insertion btn-primary" onclick="insertion()">Insertion Sort</button>
+        <button class="btn merge btn-primary" onclick="merge()">Merge Sort</button>
+        <button class="btn quick btn-primary" onclick="quick()">Quick Sort</button>
+        <button class="btn selection btn-primary" onclick="selection()">Selection Sort</button>
+    </div>
+    <div id="visualizer"></div>
+    <script src="./algo/sorting.js"></script>
+    <script src="./algo/bubble.js"></script>
+   <script src="./algo/selection.js"></script>
+   <script src="./algo/insertion.js"></script>
+   <script src="./algo/merge.js"></script>
+    <script src="./algo/quick.js"></script>
+</body>
+</html>
