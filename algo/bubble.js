@@ -1,5 +1,5 @@
 async function bubble(){
-    if(myVar!=null) clearTimeout(myVar);
+    if(myVar!=null) clearTimeout(myVar);  // stop if any animation is running 
     const arr=document.getElementById('visualizer').children;
     for(let i=0;i<arr.length;i++){
         for(let j=0;j<arr.length-i-1;j++){
