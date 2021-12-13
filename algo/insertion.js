@@ -3,7 +3,6 @@ async function insertion(){
     const arr=document.getElementById('visualizer').children;
     for(let i=0;i<arr.length;i++){
         for(let j=i;j>0;j--){
-            console.log(i,j);
             arr[j].style.backgroundColor='white';
             arr[j-1].style.backgroundColor='darkorange';
             await new Promise(resolve=>{
