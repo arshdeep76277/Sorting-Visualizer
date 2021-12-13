@@ -1,6 +1,5 @@
 async function selection(){
     if(myVar!=null) clearTimeout(myVar); 
-    let delay=document.getElementById('speed').value;
      const arr=document.getElementById('visualizer').children;
      for(let i=0;i<arr.length;i++){
          var currentMin=arr[i];
@@ -18,7 +17,6 @@ async function selection(){
                     resolve();
                 },delay)
             })    
-         
          }
          swap(currentMin,arr[i]);
          arr[i].style.backgroundColor='green';

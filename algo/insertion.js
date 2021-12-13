@@ -1,6 +1,5 @@
 async function insertion(){
     if(myVar!=null) clearTimeout(myVar); 
-    let delay=document.getElementById('speed').value;
     const arr=document.getElementById('visualizer').children;
     for(let i=0;i<arr.length;i++){
         for(let j=i;j>0;j--){

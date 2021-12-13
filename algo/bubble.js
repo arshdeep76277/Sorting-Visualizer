@@ -1,7 +1,6 @@
-const arr=document.getElementById('visualizer').children;
 async function bubble(){
-    let delay=document.getElementById('speed').value;
     if(myVar!=null) clearTimeout(myVar);
+    const arr=document.getElementById('visualizer').children;
     for(let i=0;i<arr.length;i++){
         for(let j=0;j<arr.length-i-1;j++){
             arr[j].style.backgroundColor='white';
@@ -20,9 +19,4 @@ async function bubble(){
         }
         arr[arr.length-i-1].style.backgroundColor='green';
     }
-}
-const swap=(a,b)=>{
-    let temp=a.style.height;
-    a.style.height=b.style.height;
-    b.style.height=temp;
 }

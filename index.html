@@ -8,9 +8,9 @@
     <h2>Sorting visualizer</h2>
     <form class="form">
         <label>Speed:</label>
-        <input id="speed" type="range" name="speed" value="25" min="0" max="1000">
+        <input id="speed" type="range" name="speed" value="25" min="0" max="1000" onchange="setSpeed()">
         <label>Array size:</label>
-        <input id="size" type="range" name="size" value="50" min="10" max="100">
+        <input id="size" type="range" name="size" value="50" min="10" max="100" onchange="changeSize()">
     </form>
     <div class="btn-container">
         <button class="btn new-array btn-green" onclick="CreateArray()">New Array</button>
@@ -21,6 +21,10 @@
         <button class="btn selection btn-primary" onclick="selection()">Selection Sort</button>
     </div>
     <div id="visualizer"></div>
+    <div id='About'>
+        <h4>Hey ! Thank you for visiting</h4>
+        <p>Contact me at : arshdeep.11.pi@gmail.com</p>
+    </div>
     <script src="./algo/sorting.js"></script>
     <script src="./algo/bubble.js"></script>
    <script src="./algo/selection.js"></script>

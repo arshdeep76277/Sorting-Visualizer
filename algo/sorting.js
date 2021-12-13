@@ -1,4 +1,4 @@
-var myVar;
+var myVar,delay;
 const CreateArray=()=>{
     const size=document.getElementById("size").value;
     if(myVar!=null) clearTimeout(myVar); 
@@ -8,4 +8,18 @@ const CreateArray=()=>{
     }
    document.getElementById("visualizer").innerHTML=`${arr.map(x=>`<div class="bar" style="height:${x/2.5}rem"></div>`).join('')}`;
 }
-CreateArray(50);
+const swap=(a,b)=>{
+    let temp=a.style.height;
+    a.style.height=b.style.height;
+    b.style.height=temp;
+}
+
+const setSpeed=()=>{
+    delay=1000-document.getElementById("speed").value;
+}
+setSpeed();
+const changeSize=()=>{
+    const size=document.getElementById("size").value;
+    CreateArray(size);
+}
+changeSize();

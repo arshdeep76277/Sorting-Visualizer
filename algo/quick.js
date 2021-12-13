@@ -8,7 +8,7 @@ async function quickSort(arr, start,end,delay) {
       first:`${Math.floor(Math.random()*255)}`,
       second:`${Math.floor(Math.random()*255)}`,
       third:`${Math.floor(Math.random()*255)}`
-  } 
+  }
   for(let i=start;i<=end;i++){
       arr[i].style.backgroundColor = `rgb(${ranDomColors.first},200,${ranDomColors.third})`;
   }
@@ -36,16 +36,15 @@ async function quickSort(arr, start,end,delay) {
   }
   arr[low].style.height=pivot.style.height;
   arr[low].style.backgroundColor='green';
-  await quickSort(arr, start, low-1,delay);
-  await quickSort(arr, low+1, end,delay);
+  await quickSort(arr, start, low-1);
+  await quickSort(arr, low+1, end);
 }      
      
 function quick() {
-  let delay=document.getElementById('speed').value;
     if(myVar!=undefined) clearTimeout(myVar);
     const arr=document.getElementById('visualizer').children;
     let start = 0;
     let end = arr.length - 1;
-    quickSort(arr, start, end, delay);
+    quickSort(arr, start, end);
 }
 

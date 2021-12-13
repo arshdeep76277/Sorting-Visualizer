@@ -1,5 +1,6 @@
 *{
     margin:0px;
+    font-family: 'Courier New', Courier, monospace;
 }
 body{
     background-color: rgb(15, 15, 15);
@@ -48,8 +49,18 @@ body{
     margin-left: 5px;
     border-radius: 0rem 0rem 0.5rem 0.5rem;
     box-shadow: white 0.5px 2px 0.5px 0.5px;
-    transition: ease-in 0.5s;
+    
 }
 .form{
     padding: 2rem;
+}
+#About{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 3rem;
+   margin-top: auto;
+}
+#About > * {
+    margin-bottom: 1rem;
 }

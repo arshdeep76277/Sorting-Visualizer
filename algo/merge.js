@@ -1,4 +1,8 @@
-async function mergeArray(arr,start,mid,end,delay){
+async function mergeArray(arr,start,mid,end){
+    const randomColor=`rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255})`
+    for(let i=start;i<=end;i++){
+        arr[i].style.backgroundColor=randomColor;
+    }
     let i=start,j=mid+1;
     const temp=[];
     while(i<=mid && j<=end){
@@ -30,7 +34,7 @@ async function mergeArray(arr,start,mid,end,delay){
         })
     }
 }
-async function mergeSort(arr,start,end,delay){
+async function mergeSort(arr,start,end){
     if(start>=end) return;
     const mid=Math.floor((start+end)/2);
     const color={
@@ -43,18 +47,17 @@ async function mergeSort(arr,start,end,delay){
             setTimeout(()=>{
                 arr[i].style.backgroundColor=`rgb(${color.first},${color.second},${color.third})`;
                 resolve();
-            },20);
+            },80);
         });
     }
-    await mergeSort(arr,start,mid,delay);
-    await mergeSort(arr,mid+1,end,delay);
-    await mergeArray(arr,start,mid,end,delay);
+    await mergeSort(arr,start,mid);
+    await mergeSort(arr,mid+1,end);
+    await mergeArray(arr,start,mid,end);
 }
 async function merge(){
-    let delay=document.getElementById('speed').value;
     const arr=document.getElementById('visualizer').children;
     if(myVar!=undefined) clearInterval(myVar);
     const start=0;
     const end=arr.length-1;
-    await mergeSort(arr,start,end,delay);
+    await mergeSort(arr,start,end);
 }
