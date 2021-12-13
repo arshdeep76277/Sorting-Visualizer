@@ -1,5 +1,5 @@
 /// implement quick sort
-async function quickSort(arr, start,end,delay) {
+async function quickSort(arr, start,end){
   if (start >= end) {
     if(start==end) arr[start].style.backgroundColor='green';
     return;

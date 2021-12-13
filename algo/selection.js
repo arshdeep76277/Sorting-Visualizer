@@ -19,7 +19,7 @@ async function selection(){
             })    
          }
          swap(currentMin,arr[i]);
-         arr[i].style.backgroundColor='green';
          currentMin.style.backgroundColor='rgb(216, 216, 104)';
+         arr[i].style.backgroundColor='green';
      }  
 }

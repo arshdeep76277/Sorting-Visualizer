@@ -23,7 +23,6 @@ async function mergeArray(arr,start,mid,end){
         temp.push(arr[j].style.height);
         j++;
     }
-    console.log(temp);
     for(let i=0;i<temp.length;i++){
         await new Promise(resolve=>{
             myVar=setTimeout(()=>{
